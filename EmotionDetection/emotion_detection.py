@@ -8,7 +8,6 @@ def emotion_detector(text_to_analyze):
     
     response = requests.post(url, json = myobj, headers = header)
     
-    # Paso 1: Verificar el status_code para manejo de errores
     if response.status_code == 400:
         return {
             'anger': None,
